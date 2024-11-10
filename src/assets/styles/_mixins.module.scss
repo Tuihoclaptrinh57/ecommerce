@@ -1,0 +1,4 @@
+// global block code, can be dynamic value in that block code
+@mixin radius_common ($radius: 10px) {
+  border-radius: $radius;
+}
