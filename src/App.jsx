@@ -8,9 +8,6 @@ function App() {
     <>
       <MainLayout>
         <MyHeader />
-        CONTENT
-        <MyButton />
-        <MyFooter />
       </MainLayout>
     </>
   )
