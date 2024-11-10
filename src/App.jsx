@@ -1,11 +1,16 @@
-import "./App.css"
-import Hello from "@components/hello/Hello"
+import MainLayout from "@components/layout/Layout"
+import MyHeader from "@components/header/Header"
+import MyFooter from "@components/footer/Footer"
 
 function App() {
   return (
-    <div>
-      <Hello /> Ecommerce
-    </div>
+    <>
+      <MainLayout>
+        <MyHeader />
+        CONTENT
+        <MyFooter />
+      </MainLayout>
+    </>
   )
 }
 
