@@ -9,35 +9,37 @@ import heartIcon from "@icons/svgs/heart.svg"
 import cartIcon from "@icons/svgs/cart.svg"
 
 function MyHeader() {
-  const { containerBoxIcon, containerMenu, containerBox, containerHeader } = styles
+  const { containerBoxIcon, containerMenu, containerBox, containerHeader, container } = styles
 
   return (
-    <div className={containerHeader}>
-      <div className={containerBox}>
-        <div className={containerBoxIcon}>
-          {dataBoxIcon.map((icon, index) => {
-            return <BoxIcon type={icon.type} href={icon.href} />
-          })}
+    <div className={container}>
+      <div className={containerHeader}>
+        <div className={containerBox}>
+          <div className={containerBoxIcon}>
+            {dataBoxIcon.map((icon) => {
+              return <BoxIcon type={icon.type} href={icon.href} />
+            })}
+          </div>
+          <div className={containerMenu}>
+            {dataMenu.slice(0, 3).map((menu) => {
+              return <Menu content={menu.content} href={menu.href} />
+            })}
+          </div>
         </div>
-        <div className={containerMenu}>
-          {dataMenu.slice(0, 3).map((menu, index) => {
-            return <Menu content={menu.content} href={menu.href} />
-          })}
+        <div>
+          <img src={Logo} alt="logo" style={{ width: "180px", height: "90px" }} />
         </div>
-      </div>
-      <div>
-        <img src={Logo} alt="logo" style={{ width: "180px", height: "90px" }} />
-      </div>
-      <div className={containerBox}>
-        <div className={containerMenu}>
-          {dataMenu.slice(3, dataMenu.length).map((menu, index) => {
-            return <Menu content={menu.content} href={menu.href} />
-          })}
-        </div>
-        <div className={containerBoxIcon}>
-          <img width={20} height={20} src={reLoadIcon} alt="reload" />
-          <img width={20} height={20} src={heartIcon} alt="heart" />
-          <img width={20} height={20} src={cartIcon} alt="cart" />
+        <div className={containerBox}>
+          <div className={containerMenu}>
+            {dataMenu.slice(3, dataMenu.length).map((menu) => {
+              return <Menu content={menu.content} href={menu.href} />
+            })}
+          </div>
+          <div className={containerBoxIcon}>
+            <img width={20} height={20} src={reLoadIcon} alt="reload" />
+            <img width={20} height={20} src={heartIcon} alt="heart" />
+            <img width={20} height={20} src={cartIcon} alt="cart" />
+          </div>
         </div>
       </div>
     </div>

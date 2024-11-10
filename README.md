@@ -6,3 +6,4 @@
 ### [DEV-6].[8h48].[10.11.2024] - Configuring folder structure scss.
 ### [DEV-7].[9h51].[10.11.2024] - Working with mixins.
 ### [DEV-8].[11h44].[10.11.2024] - Working with header.
+### [DEV-9].[13h51].[10.11.2024] - Adding new feature with header.
